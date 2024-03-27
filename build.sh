@@ -19,8 +19,8 @@ done
 
 echo "configuring ..."
 $CMAKE -S $CMAKE_LISTS_FILE -B $BUILD_DIR -DCMAKE_BUILD_TYPE=$TYPE
-echo " DONE\n"
+echo " DONE"
 
 echo "compiling ..."
 $CMAKE --build $BUILD_DIR
-echo " DONE\n"
+echo " DONE"
