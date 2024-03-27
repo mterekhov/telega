@@ -11,14 +11,6 @@ if(APPLE)
  	include_directories(/opt/homebrew/Cellar/openssl@3/3.2.1/include)
 endif()
 
-if(UNIX AND NOT APPLE)
-	set(OPENSSL_ROOT_DIR /usr/local)
-	find_package(PkgConfig REQUIRED)
-
-	pkg_check_modules(Tesseract REQUIRED IMPORTED_TARGET tesseract lept)
-	add_library(Tesseract::libtesseract ALIAS PkgConfig::Tesseract)
-endif()
-
 find_package(OpenSSL REQUIRED)
 
 #	Tests coverage

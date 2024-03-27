@@ -6,7 +6,7 @@
 //
 
 #include <stdio.h>
-#include "TGTools.h"
+#include "tgtools.h"
 
 namespace spcTelega {
 
