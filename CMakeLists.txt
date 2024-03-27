@@ -6,7 +6,7 @@ set(PROJECT_NAME "telega")
 project(${PROJECT_NAME})
 
 set(OPENSSL_ROOT_DIR /opt/homebrew/Cellar/openssl@3/3.2.1/)
-include_directories(/opt/homebrew/Cellar/openssl@3/3.2.1/include)
+include_directories(/opt/homebrew/Cellar/openssl@3/3.2.1/include include)
 
 find_package(OpenSSL REQUIRED)
 
@@ -14,5 +14,5 @@ find_package(OpenSSL REQUIRED)
 set(COVERAGE_COMPILER_FLAGS "-g --coverage -fprofile-arcs -ftest-coverage")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COVERAGE_COMPILER_FLAGS}")
 
-add_executable(${PROJECT_NAME} telega.cpp tghttprequestservice.cpp tgsslsocket.cpp tgtelegrambotapi.cpp tgtools.cpp)
+add_executable(${PROJECT_NAME} src/telega.cpp src/tghttprequestservice.cpp src/tgsslsocket.cpp src/tgtelegrambotapi.cpp src/tgtools.cpp)
 target_link_libraries(${PROJECT_NAME} LINK_PUBLIC ${OPENSSL_LIBRARIES} ${OPENSSL_SSL_LIBRARIES})
