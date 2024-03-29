@@ -10,7 +10,7 @@ TGTelegramBotAPI::~TGTelegramBotAPI() {
     
 }
 
-void TGTelegramBotAPI::sendMessage(const std::string& message) {
+std::string TGTelegramBotAPI::sendMessage(const std::string& message) {
     std::string link = "/bot" + botID + "/sendMessage";
     std::string response = httpService.sendGETRequest(link, {
         {"chat_id", "@adityaloka"},
@@ -20,6 +20,7 @@ void TGTelegramBotAPI::sendMessage(const std::string& message) {
         {"accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"},
         {"connection", "close"}
                                                         });
+    return response;
 }
 
 }

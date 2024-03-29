@@ -17,7 +17,7 @@ public:
     TGTelegramBotAPI(const std::string& botID);
     ~TGTelegramBotAPI();
     
-    void sendMessage(const std::string& message);
+    std::string sendMessage(const std::string& message);
 };
 
 };
