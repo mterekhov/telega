@@ -24,5 +24,5 @@ find_package(OpenSSL REQUIRED)
 target_link_libraries(${TARGET_NAME} LINK_PUBLIC ${OPENSSL_LIBRARIES} ${OPENSSL_SSL_LIBRARIES})
 
 #	Compiler flags
-# set(COVERAGE_COMPILER_FLAGS "-fprofile-arcs -ftest-coverage")
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COVERAGE_COMPILER_FLAGS}")
+set(COVERAGE_COMPILER_FLAGS "-fprofile-arcs -ftest-coverage")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${COVERAGE_COMPILER_FLAGS}")
